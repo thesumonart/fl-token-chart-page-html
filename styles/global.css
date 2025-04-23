@@ -416,7 +416,8 @@ a {
     background: var(--bgDefaultPrimaryHov);
     border: 1px solid var(--borderDefaultPrimary);
     border-radius: 10px;
-    overflow: hidden;
+    height: fit-content;
+    overflow: clip;
     .token-name-n-action-wrapper {
       padding: 16px;
       display: flex;
@@ -552,9 +553,14 @@ a {
       }
     }
     .chart-wrapper {
-      .token-chart-image {
+      height: auto;
+      display: flex;
+      .chart-image-wrapper {
         width: 100%;
-        height: auto;
+        .token-chart-image {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
